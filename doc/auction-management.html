@@ -1,0 +1,923 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Auction Management - Auctioneer</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#auction-management" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="Auctioneer" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Auctioneer
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Auction Management
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="Auctioneer" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Auctioneer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="Installation.html" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="admin-control.html" title="Application Control" class="md-nav__link">
+      Application Control
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Auction Management
+      </label>
+    
+    <a href="auction-management.html" title="Auction Management" class="md-nav__link md-nav__link--active">
+      Auction Management
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#must-configure-features" class="md-nav__link">
+    Must Configure Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payment-method" class="md-nav__link">
+    Payment Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencies" class="md-nav__link">
+    Currencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-currency" class="md-nav__link">
+    Create Currency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-currency-information" class="md-nav__link">
+    Edit Currency Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    Category
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-category" class="md-nav__link">
+    Create Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-category" class="md-nav__link">
+    Edit Category
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-request" class="md-nav__link">
+    Verification Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manage-auction" class="md-nav__link">
+    Manage Auction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-auctions" class="md-nav__link">
+    All Auctions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-auction" class="md-nav__link">
+    Search Auction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-seller-money" class="md-nav__link">
+    Release Seller Money
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic" class="md-nav__link">
+    Automatic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually" class="md-nav__link">
+    Manually
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disputes" class="md-nav__link">
+    Disputes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homepage-management" class="md-nav__link">
+    HomePage Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-slider" class="md-nav__link">
+    Manage Slider
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-sliders" class="md-nav__link">
+    All Sliders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-slider" class="md-nav__link">
+    Create Slider
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    Layouts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-sections" class="md-nav__link">
+    All Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-section" class="md-nav__link">
+    Create Section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-finance" class="md-nav__link">
+    My Finance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-transactions" class="md-nav__link">
+    All Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#must-configure-features" class="md-nav__link">
+    Must Configure Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payment-method" class="md-nav__link">
+    Payment Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencies" class="md-nav__link">
+    Currencies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-currency" class="md-nav__link">
+    Create Currency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-currency-information" class="md-nav__link">
+    Edit Currency Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    Category
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-category" class="md-nav__link">
+    Create Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-category" class="md-nav__link">
+    Edit Category
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-request" class="md-nav__link">
+    Verification Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manage-auction" class="md-nav__link">
+    Manage Auction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-auctions" class="md-nav__link">
+    All Auctions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-auction" class="md-nav__link">
+    Search Auction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-seller-money" class="md-nav__link">
+    Release Seller Money
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic" class="md-nav__link">
+    Automatic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually" class="md-nav__link">
+    Manually
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disputes" class="md-nav__link">
+    Disputes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homepage-management" class="md-nav__link">
+    HomePage Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-slider" class="md-nav__link">
+    Manage Slider
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-sliders" class="md-nav__link">
+    All Sliders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-slider" class="md-nav__link">
+    Create Slider
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    Layouts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-sections" class="md-nav__link">
+    All Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-section" class="md-nav__link">
+    Create Section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-finance" class="md-nav__link">
+    My Finance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-transactions" class="md-nav__link">
+    All Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="auction-management"><strong>Auction Management</strong></h1>
+<p>There are few features are related to <b>Auction</b> directly. To manage your auction you need to configure this features one by one first. follow steps below.</p>
+<h4 id="must-configure-features"><strong>Must Configure Features</strong></h4>
+<ul>
+<li>
+<p>Check if integrated <code>Payment Method</code> status is <code>Active</code> <br></p>
+<blockquote>
+<p><i> Directory : Payment Method &gt; All Payment Methods &gt; Status </i> .</p>
+</blockquote>
+</li>
+<li>
+<p>Check if Default <code>Currency</code> is <code>Active</code> </p>
+<blockquote>
+<p><i> Directory : Currency &gt; All Currencies &gt; Status </i> .</p>
+</blockquote>
+</li>
+<li>
+<p>Create Auction <code>Categories</code> As you want</p>
+<blockquote>
+<p><i> Directory : Category &gt; Create Category </i> .</p>
+</blockquote>
+</li>
+<li>
+<p>Auction and Bidding <code>Fees</code></p>
+<blockquote>
+<p><i> Directory : Application Control &gt; Application Settings &gt; Auction Settings </i></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="payment-method">Payment Method</h4>
+<p>Default Integrated Payment Method is <code>Paypal</code>. You can Edit Information from <code>Payment Method &gt; All Payment Methods</code></p>
+<blockquote>
+<p>More Payment methods are coming soon.</p>
+</blockquote>
+<h4 id="currencies">Currencies</h4>
+<p><code>USD</code> has been given as the default currency.</p>
+<h5 id="create-currency">Create Currency</h5>
+<p>You Can add more currencies from <code>Currency &gt; Create Currency</code></p>
+<p><img alt="Create_Currency" src="images/create_currency.png" /></p>
+<h5 id="edit-currency-information">Edit Currency Information</h5>
+<p>You can edit currency information from here. Click on the right side setting icon from the specific currency row. click on edit.</p>
+<p><img alt="Edit_Currency" src="images/edit_currency.png" /></p>
+<h4 id="category">Category</h4>
+<p>You can set Categories as you like. Seller will post Auctions Under those Categories.</p>
+<h5 id="create-category">Create Category</h5>
+<p>From here <code>Category &gt; Create Category</code> you can Create Category. It's too easy. Just put the name you want. That's it.</p>
+<h5 id="edit-category">Edit Category</h5>
+<p>Go to <code>Category &gt; All Categories</code> click on the right side setting icon from the category you want to edit. A form will appear. Edit, That's it.</p>
+<blockquote>
+<p>Note : You will be able delete only those Categories which has no Auction under their name. </p>
+</blockquote>
+<h4 id="verification-request">Verification Request</h4>
+<p>Everyone will register as a normal user. to become a seller, a user will be needed to fill up some information and will be needed to verify address.</p>
+<p>After registration to the application every <code>Buyer and Seller</code> will be needed to <code>verify their ID or Address</code> to join in auctions or to <code>become a seller</code>.</p>
+<blockquote>
+<p>Check Verification Request from here for ID Verification <code>Verification Request &gt; Verification with ID</code>
+From here for Address Verification <code>Verification Request &gt; Verification with Address</code></p>
+</blockquote>
+<p>Review this verification request from here</p>
+<p><img alt="verification_review" src="images/verification_request.png" /></p>
+<p>Click on Action button from right side to review the request, you can verify or deny from there. if it is address verification there will be address with image.</p>
+<h4 id="manage-auction">Manage Auction</h4>
+<p>To manage Auctions, please go this directory <code>Dashboard &gt; Auctions</code></p>
+<h5 id="all-auctions">All Auctions</h5>
+<p>You can observe all the auction from here <code>Auctions &gt; All Auctions</code></p>
+<p><img alt="auctions" src="images/auctions.png" /></p>
+<h5 id="search-auction">Search Auction</h5>
+<p>You will be able to find out specific auction by filter. Click on the top right filter, there will be a filter visible. search by type.</p>
+<p><img alt="filter" src="images/filter.png" /></p>
+<h5 id="release-seller-money">Release Seller Money</h5>
+<p>After selling a product, There is two way to release seller money which he is about to get from selling money from buyer.</p>
+<p>1 <code>Automatic</code> <br>
+2 <code>Manually</code></p>
+<h6 id="automatic">Automatic</h6>
+<p>You can release seller money Automatic. You do not have to release all the money one by one. To do that, please go to <code>Application Control &gt; Application Settings &gt; Auction Settings</code></p>
+<p><img alt="payment_request" src="images/payment_request.png" /></p>
+<p>Click on the top right corner <code>Edit Auction Settings</code></p>
+<p><img alt="payment_request_edit" src="images/payment_request_edit.png" /></p>
+<p>Disable <code>Seller Money Release Request</code> option. Then click on Update Auction Settings. that's it. You will never have release sellers money manually ever again.</p>
+<h6 id="manually">Manually</h6>
+<p>If you want to, you can release sellers money manually to one by one. To do that, please go to <code>Auctions &gt; Completed Auctions</code></p>
+<p><img alt="release_money" src="images/release_money.png" /></p>
+<p>Click on the <code>Action button</code> from the right side of the auction. One dropdown will appear from which you want to release the money for seller. Click on <code>Release Money</code>. that's all.</p>
+<h4 id="disputes">Disputes</h4>
+<p>To manage Disputes, please go to <code>Disputes &gt; All Disputes</code></p>
+<p><img alt="disputes" src="images/reports.png" /></p>
+<p>Click on the action icon from the right side. Click on <code>Show</code></p>
+<p><img alt="dispute_review" src="images/report_review.png" /></p>
+<p>After review, click on the <code>Solved</code>. The user who reported will get the update.</p>
+<h4 id="homepage-management">HomePage Management</h4>
+<p>You can manage your homepage <code>Slider</code> and <code>Layouts</code> from here.</p>
+<h5 id="manage-slider">Manage Slider</h5>
+<p>You can manage your homepage slider from here.</p>
+<h6 id="all-sliders">All Sliders</h6>
+<p>You will be able to upload new slider and manage multiple sliders. also you will be able to chose one slider from multiple the one you want to show in homepage.</p>
+<h6 id="create-slider">Create Slider</h6>
+<p>To create new slider. please go to <code>Homepage Management &gt; Manage Slider &gt; Create Slider</code></p>
+<h5 id="layouts">Layouts</h5>
+<p>You will be able to customize your homepage layouts from here. also you will be create new layout which list has been given already.</p>
+<h6 id="all-sections">All Sections</h6>
+<p>All the created sections will be shown here. You will be able to <code>Edit</code> and will be able to make it <code>Active</code> to show in homepage. to do that click on the on action button from the right side. A dropdown will appear from here you can manage this.</p>
+<p><img alt="layouts" src="images/layouts.png" /></p>
+<h6 id="create-section">Create Section</h6>
+<p>To Create a new Section, please go to <code>Homepage Management &gt; Layouts &gt; Create Section</code></p>
+<p><img alt="create_section" src="images/section_create.png" /></p>
+<blockquote>
+<p>Note : <code>Total Content</code> amount 6 is suggested.</p>
+</blockquote>
+<h4 id="my-finance">My Finance</h4>
+<p>All the transaction will be displayed here. And also you will be able to manage your finance from here.</p>
+<h5 id="all-transactions">All Transactions</h5>
+<p>You will find you all the transactions from here. to get go to <code>My Finace &gt; All Transactions</code></p>
+<p><img alt="transactions" src="images/transaction.png" /></p>
+<h5 id="wallet">Wallet</h5>
+<p>To check your wallet money. Go to <code>My Finace &gt; Wallet</code></p>
+<p><img alt="wallet" src="images/wallet.png" /></p>
+<p>To <code>Deposit</code> and <code>Withdraw</code> click on the right side option button.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="admin-control.html" title="Application Control" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Application Control
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Copyright &copy; 
+        <a href="http://www.codemen.org">CodeMen</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+      <script src="assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+        <script src="js/script.js"></script>
+      
+    
+  </body>
+</html>

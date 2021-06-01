@@ -1,0 +1,872 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Application Control - Auctioneer</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#admin-control" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="Auctioneer" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Auctioneer
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Application Control
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="Auctioneer" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Auctioneer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="Installation.html" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Application Control
+      </label>
+    
+    <a href="admin-control.html" title="Application Control" class="md-nav__link md-nav__link--active">
+      Application Control
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin-application-control" class="md-nav__link">
+    Admin Application Control
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-settings" class="md-nav__link">
+    Application Settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-settings" class="md-nav__link">
+    General Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auction-settings" class="md-nav__link">
+    Auction Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paypal-settings" class="md-nav__link">
+    Paypal Settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paypal-web-hook-id" class="md-nav__link">
+    Paypal Web Hook ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-information" class="md-nav__link">
+    Page Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-management" class="md-nav__link">
+    Role Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-role" class="md-nav__link">
+    Edit Role
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-role" class="md-nav__link">
+    Create Role
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-management" class="md-nav__link">
+    Language Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-language" class="md-nav__link">
+    switch language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-language" class="md-nav__link">
+    Create New Language
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menu-manager" class="md-nav__link">
+    Menu Manager
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-link-dropdown-title" class="md-nav__link">
+    Custom link / Dropdown title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-existed-link" class="md-nav__link">
+    Add Existed Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-link" class="md-nav__link">
+    Customize link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    User Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-user" class="md-nav__link">
+    Manage User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-user" class="md-nav__link">
+    Create New User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="auction-management.html" title="Auction Management" class="md-nav__link">
+      Auction Management
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin-application-control" class="md-nav__link">
+    Admin Application Control
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-settings" class="md-nav__link">
+    Application Settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-settings" class="md-nav__link">
+    General Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auction-settings" class="md-nav__link">
+    Auction Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paypal-settings" class="md-nav__link">
+    Paypal Settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paypal-web-hook-id" class="md-nav__link">
+    Paypal Web Hook ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-information" class="md-nav__link">
+    Page Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-management" class="md-nav__link">
+    Role Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-role" class="md-nav__link">
+    Edit Role
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-role" class="md-nav__link">
+    Create Role
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-management" class="md-nav__link">
+    Language Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-language" class="md-nav__link">
+    switch language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-language" class="md-nav__link">
+    Create New Language
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menu-manager" class="md-nav__link">
+    Menu Manager
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-link-dropdown-title" class="md-nav__link">
+    Custom link / Dropdown title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-existed-link" class="md-nav__link">
+    Add Existed Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-link" class="md-nav__link">
+    Customize link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    User Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-user" class="md-nav__link">
+    Manage User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-user" class="md-nav__link">
+    Create New User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="admin-control">Admin Control</h1>
+<p>This section describes how you can manage your application. All the description is in bellow with images</p>
+<p>Use the following default credentials to get logged in as superadmin - </p>
+<ul>
+<li><b>URL</b> : https://yourdomain.url/login</li>
+<li><b>User Name</b>: superadmin</li>
+<li><b>Password</b>: superadmin</li>
+</ul>
+<p><em>NB: change the credentials to ignore security issue.</em></p>
+<p>Instructions : <code>Dashboard &gt; My Profile &gt; Edit Profile / Change Password</code> </p>
+<h2 id="admin-application-control">Admin Application Control</h2>
+<p>First of all you can set admin options according to your requirements in the system. to do that please follow steps is explained below one by one</p>
+<ul>
+<li>Step 1 : Set up general settings</li>
+<li>Step 2 : Set up auction settings</li>
+<li>Step 3 : Set up paypal credential</li>
+<li>Step 4 : Set up page basic information</li>
+</ul>
+<h4 id="application-settings">Application Settings</h4>
+<p>After login as superadmin go to <code>Application Control &gt; Application Settings</code></p>
+<p><img alt="application_control" src="images/application-control.png" /></p>
+<h5 id="general-settings">General Settings</h5>
+<p>To set general information of your application go to <code>General</code>. from application settings</p>
+<p><img alt="settings" src="images/settings.png" /></p>
+<p>To edit the general options click on the <code>edit button in right corner</code> on the title bar. There you can edit your company name, company logo, company email and other options.</p>
+<p><img alt="settings" src="images/general-settings.png" /></p>
+<h5 id="auction-settings">Auction Settings</h5>
+<p>To set Auction and Bidding fees, go to <code>Auction Settings</code>. from application settings</p>
+<p><img alt="settings" src="images/Auction_settings.png" /></p>
+<p>To edit Auction and Bidding fees click on the <code>edit button in right corner</code> on the title bar. There you can edit all the fees on auctions and bids.</p>
+<p><img alt="settings" src="images/auction_bidding_fees.png" /></p>
+<p>Note :</p>
+<p>1 : <code>Bidding Fees</code> : All bidding fees in fixed amount.</p>
+<p>2 : <code>Seller money release request</code> : If you want to release Seller money <i>(the money seller about to get after selling a product)</i> automatically, set this field as <code>Disabled</code>, if you want to release seller money manually please set this field as <code>Enabled</code> </p>
+<p>3 : <code>Buyer Report Time</code> : If buyer don't get the product or face any problem after winner an auction buyer will be able to report on the seller, Set how many days buyer will get to report after the delivery date passes which given by the seller.</p>
+<h5 id="paypal-settings">Paypal Settings</h5>
+<p>To set Payment method, go to <code>Paypal Settings</code>. from application settings</p>
+<p><img alt="settings" src="images/Paypal_settings.png" /></p>
+<p>Add Your paypal credential here.</p>
+<p><i> To edit click on the <code>edit button in right corner</code> on the title bar </i>.</p>
+<p><img alt="settings" src="images/Paypal_info.png" /></p>
+<p>You can get the above credentials from your PAYPAL BUSSINESS account. Visit the following links to get the credentials.</p>
+<blockquote>
+<p>https://developer.paypal.com/developer/accounts/</p>
+<p>https://developer.paypal.com/docs/integration/admin/manage-apps/</p>
+</blockquote>
+<p>See the following image - 
+<img alt="Paypal Credentials" src="images/paypal_credentials.gif" /></p>
+<h6 id="paypal-web-hook-id">Paypal Web Hook ID</h6>
+<p>For Paypal webhook ID go to <b>Add WebHook</b> Section in live mode and click on <b>Add Webhook</b> button.</p>
+<p><img alt="Paypal Webhook" src="images/paypal_webhook.jpg" /></p>
+<p>Use the following url <b>Webhook Url</b> in paypal webhook setting -</p>
+<blockquote>
+<p>https://yourdomain.com/api/paypal/webhook</p>
+</blockquote>
+<p><code>NB: To use paypal service your website must to be SSL certified which means HTTPS.</code></p>
+<p>For Event types select the following options and save - </p>
+<ul>
+<li>Payment sale completed</li>
+<li>Payment sale denied</li>
+<li>Payment sale refunded</li>
+<li>Payment sale reversed</li>
+</ul>
+<p><img alt="Paypal Webhook Event" src="images/paypal_webhook_event.png" /></p>
+<p>Now you are ready to use paypal payment method.</p>
+<h5 id="page-information">Page Information</h5>
+<p>To set page information, go to <code>Page Information</code>. from application settings</p>
+<p><img alt="page_information" src="images/Page_information.png" /></p>
+<p>Add Your Business Information here.</p>
+<p><i> To edit click on the <code>edit button in right corner</code> on the title bar </i>.</p>
+<p><img alt="information_settings" src="images/Page_information_Settings.png" /></p>
+<h4 id="role-management">Role Management</h4>
+<p>To manage role. go to <code>Application Control &gt; Role Management</code></p>
+<h5 id="edit-role">Edit Role</h5>
+<p>To edit a role. follow this direction <code>Application Control &gt; Role Management &gt; list</code></p>
+<p><img alt="" src="images/Role_Management.png" /></p>
+<p>There will three types of role such as</p>
+<ul>
+<li>1 Buyer</li>
+<li>2 Seller</li>
+<li>3 Admin</li>
+</ul>
+<p><img alt="edit_role" src="images/edit_role.png" /></p>
+<p>From the right side setting icon, you can edit a role. you can change <code>route accesses</code> from there. which will define a user or seller will get access of what events. You can also disable all users at once.</p>
+<h5 id="create-role">Create Role</h5>
+<p>To create new role. please go to <code>Application Control &gt; Role Management &gt; Create New</code></p>
+<p><img alt="create_role" src="images/create_role.png" /></p>
+<p><b> Note : </b> You can create new role from here and you will be able to give the new role as much as access you want. follow instruction is given below.</p>
+<p><img alt="Create_new_role" src="images/create_new_role.png" /></p>
+<p><strong>Important :</strong> Before you create new role and give access, must check how much access you are giving to the new role.</p>
+<h4 id="language-management">Language Management</h4>
+<p>To Configure your language. please go to <code>Application Control &gt; Language Management &gt; Settings</code>
+<img alt="language_settings" src="images/Language_Settings.png" /></p>
+<h5 id="settings">Settings</h5>
+<p>You can change language from here..</p>
+<p><img alt="edit_information" src="images/lang_setting.png" /></p>
+<h5 id="switch-language">switch language</h5>
+<p>To switch language. go to  <code>Application Control &gt; Language Management &gt; list</code></p>
+<p><img alt="list" src="images/lang_list.png" /></p>
+<p>You can switch your application language from here.</p>
+<h5 id="create-new-language">Create New Language</h5>
+<p>To create new language. go to <code>Application Control &gt; Language Management &gt; Create New</code></p>
+<p><img alt="create_new" src="images/lang_create.png" /></p>
+<p>You will be able to create a new language from here</p>
+<p><img alt="create_lag" src="images/lang_create_form.png" /></p>
+<h4 id="menu-manager">Menu Manager</h4>
+<p>To manage your menu. go to <code>Application Control &gt; Menu Manager</code></p>
+<p><img alt="menu" src="images/menu.png" /></p>
+<h5 id="custom-link-dropdown-title">Custom link / Dropdown title</h5>
+<p>you can add custom <code>link and dropdown title</code> to your backend nav from here. please follow below steps</p>
+<p><img alt="add_link" src="images/add_link.png" /></p>
+<ul>
+<li>
+<p><b>Use 1 :</b> If you want to make a link, place the url of your link to <code>Enter Url</code> field and title to <code>Enter menu item name</code> filed</p>
+</li>
+<li>
+<p><b>Use 2 :</b> If you want to make a <code>dropdown</code>, left <b>Enter Url</b> field blank and give the dropdown title in <code>Enter menu item name</code></p>
+</li>
+</ul>
+<h5 id="add-existed-link">Add Existed Link</h5>
+<p><img alt="existed_link" src="images/add_route.png" /></p>
+<p><strong>Important :</strong> You can add a link to your nav which is already existed in this application. you can left it as a nav item or you can use it <code>as sub link</code> of a dropdown menu. There is a option in the right side titled as <code>Menu Items</code> where you can <code>drag and drop</code> your menu items, which will help you to make a item to convert it into a dropdown sub item.</p>
+<h5 id="customize-link">Customize link</h5>
+<p><img alt="nav_items" src="images/route_menu.png" /></p>
+<p>You can drag and drop your item to change position and you are allowed to convert the item to dropdown sub item by <code>pushing to right</code> a bit</p>
+<p><img alt="customize_item" src="images/drag_drop.png" /></p>
+<p>You can customize your item from here, and you also can use font awesome icon, use icon class in menu icon field, <code>example : fa fa-icon</code></p>
+<p><strong>Important :</strong> After customization your nav, don't forget to click on <code>Save Menu</code>.</p>
+<h2 id="user-management">User Management</h2>
+<p>User management is an important section of your application. From here you can control all users. also you have the access to suspend financial activities / remove an user  and change users account status.</p>
+<h3 id="manage-user">Manage User</h3>
+<p>To manage user profile : go to <code>User Management &gt; List</code> on the right of a user list, you will find a setting icon where you will get all the access to control any user's status and profile.</p>
+<h3 id="create-new-user">Create New User</h3>
+<p>You also will able to create new user with any type of user role. from <code>User Management &gt; Create New</code>.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="Installation.html" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installation
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="auction-management.html" title="Auction Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Auction Management
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Copyright &copy; 
+        <a href="http://www.codemen.org">CodeMen</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+      <script src="assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+        <script src="js/script.js"></script>
+      
+    
+  </body>
+</html>
