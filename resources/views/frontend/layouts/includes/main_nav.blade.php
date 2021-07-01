@@ -36,11 +36,11 @@
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="{{is_current_route('user-profile.index') ? 'active' : ''}}"><a href="{{route('user-profile.index')}}"><i class="fa fa-dot-circle-o"></i> Profile</a></li>
+                        <li class="{{is_current_route('user-profile.index') ? 'active' : ''}}"><a href="{{route('user-profile.index')}}"><i class="fa fa-dot-circle-o"></i> Mon profil</a></li>
                         @if(!is_null(auth()->user()->seller))
-                            <li class="{{is_current_route('seller-profile.index') ? 'active' : ''}}"><a href="{{route('seller-profile.index')}}"><i class="fa fa-dot-circle-o"></i> Store</a></li>
+                            <li class="{{is_current_route('seller-profile.index') ? 'active' : ''}}"><a href="{{route('seller-profile.index')}}"><i class="fa fa-dot-circle-o"></i> Boutique</a></li>
                         @else
-                            <li class="{{is_current_route('seller-profile.create') ? 'active' : ''}}"><a href="{{route('seller-profile.create')}}"><i class="fa fa-dot-circle-o"></i> Become Seller</a></li>
+                            <li class="{{is_current_route('seller-profile.create') ? 'active' : ''}}"><a href="{{route('seller-profile.create')}}"><i class="fa fa-dot-circle-o"></i> Devenir vendeur</a></li>
 
                         @endif
                     </ul>
@@ -48,76 +48,76 @@
                 <li class="treeview {{is_current_route(['user-currency.index','deposit.index','withdrawal.index','transaction-history']) ? 'active' : ''}}">
                     <a href="javascript:;">
                         <i class="fa fa-money"></i>
-                        <span>{{__('My Finance')}}</span>
+                        <span>{{__('Mes finances')}}</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="{{is_current_route('user-currency.index') ? 'active' : ''}}"><a href="{{route('user-currency.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('My Wallet')}}</a>
+                        <li class="{{is_current_route('user-currency.index') ? 'active' : ''}}"><a href="{{route('user-currency.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Mon portefeuille')}}</a>
                         </li>
-                        <li class="{{is_current_route('deposit.index') ? 'active' : ''}}"><a href="{{route('deposit.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Deposit History')}}</a>
+                        <li class="{{is_current_route('deposit.index') ? 'active' : ''}}"><a href="{{route('deposit.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Mes dépôts')}}</a>
                         </li>
-                        <li class="{{is_current_route('withdrawal.index') ? 'active' : ''}}"><a href="{{route('withdrawal.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Withdrawal History')}}
+                        <li class="{{is_current_route('withdrawal.index') ? 'active' : ''}}"><a href="{{route('withdrawal.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Mes retraits')}}
                             </a></li>
-                        <li class="{{is_current_route('transaction-history') ? 'active' : ''}}"><a href="{{route('transaction-history')}}"><i class="fa fa-dot-circle-o"></i>{{__('Transaction History')}}</a></li>
+                        <li class="{{is_current_route('transaction-history') ? 'active' : ''}}"><a href="{{route('transaction-history')}}"><i class="fa fa-dot-circle-o"></i>{{__('Mes transactions')}}</a></li>
                     </ul>
                 </li>
                 <li class="treeview {{is_current_route(['auction.create','seller-profile.index','user-profile.index','seller-profile.create']) ? 'active' : ''}}">
                     <a href="javascript:;">
                         <i class="fa fa-list-ul"></i>
-                        <span>{{__('Manage Auction')}}</span>
+                        <span>{{__('Gérer les enchères')}}</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
                         @if(!is_null(auth()->user()->seller))
                             <li class="{{is_current_route('auction.create') ? 'active' : ''}}">
-                                <a href="{{route('auction.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Create Auction')}}</a>
+                                <a href="{{route('auction.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Créer une enchère')}}</a>
                             </li>
                             <li class="{{is_current_route('seller-profile.index') ? 'active' : ''}}">
-                                <a href="{{route('seller-profile.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Created Auctions')}}</a>
+                                <a href="{{route('seller-profile.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Mes enchères')}}</a>
                             </li>
                         @endif
                         <li class="{{is_current_route('user-profile.index') ? 'active' : ''}}">
-                            <a href="{{route('user-profile.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Attended Auctions')}}</a>
+                            <a href="{{route('user-profile.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Enchères assistées')}}</a>
                         </li>
                         <li class="{{is_current_route('seller-profile.create') ? 'active' : ''}}">
-                            <a href="{{route('seller-profile.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Become A Seller')}}</a>
+                            <a href="{{route('seller-profile.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Devenir vendeur')}}</a>
                         </li>
                     </ul>
                 </li>
                 <li class="treeview {{is_current_route(['user-profile.edit','user-profile.change-password','user-profile.avatar.edit','user-address.create','user-address.index','profile-verification-with-address.create','profile-verification-with-id.create']) ? 'active' : ''}}">
                     <a href="javascript:;">
                         <i class="fa fa-user-circle-o"></i>
-                        <span>{{__('Manage Profile')}}</span>
+                        <span>{{__('Gérer mon profil')}}</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="{{is_current_route('user-profile.edit') ? 'active' : ''}}"><a href="{{route('user-profile.edit')}}"><i class="fa fa-dot-circle-o"></i>{{__('Edit Profile')}}</a></li>
-                        <li class="{{is_current_route('user-profile.change-password') ? 'active' : ''}}"><a href="{{route('user-profile.change-password')}}"><i class="fa fa-dot-circle-o"></i>{{__('Change Password')}}</a></li>
-                        <li class="{{is_current_route('user-profile.avatar.edit') ? 'active' : ''}}"><a href="{{route('user-profile.avatar.edit')}}"><i class="fa fa-dot-circle-o"></i>{{__('Change Profile Picture')}}</a></li>
-                        <li class="{{is_current_route('user-address.create') ? 'active' : ''}}"><a href="{{route('user-address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Add New Address')}}</a></li>
-                        <li class="{{is_current_route('user-address.index') ? 'active' : ''}}"><a href="{{route('user-address.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Choose Default Address')}}</a></li>
-                        <li class="{{is_current_route('profile-verification-with-address.create') ? 'active' : ''}}"><a href="{{route('profile-verification-with-address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Verify Your Address')}}</a></li>
-                        <li class="{{is_current_route('profile-verification-with-id.create') ? 'active' : ''}}"><a href="{{route('profile-verification-with-id.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Verify Your Identity')}}</a></li>
+                        <li class="{{is_current_route('user-profile.edit') ? 'active' : ''}}"><a href="{{route('user-profile.edit')}}"><i class="fa fa-dot-circle-o"></i>{{__('Editer mon profil')}}</a></li>
+                        <li class="{{is_current_route('user-profile.change-password') ? 'active' : ''}}"><a href="{{route('user-profile.change-password')}}"><i class="fa fa-dot-circle-o"></i>{{__('Changer mot de passe')}}</a></li>
+                        <li class="{{is_current_route('user-profile.avatar.edit') ? 'active' : ''}}"><a href="{{route('user-profile.avatar.edit')}}"><i class="fa fa-dot-circle-o"></i>{{__('Changer ma photo de profil')}}</a></li>
+                        <li class="{{is_current_route('user-address.create') ? 'active' : ''}}"><a href="{{route('user-address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Ajouter une nouvelle adresse')}}</a></li>
+                        <li class="{{is_current_route('user-address.index') ? 'active' : ''}}"><a href="{{route('user-address.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Choisir une adresse par défaut')}}</a></li>
+                        <li class="{{is_current_route('profile-verification-with-address.create') ? 'active' : ''}}"><a href="{{route('profile-verification-with-address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Vérifier votre adresse')}}</a></li>
+                        <li class="{{is_current_route('profile-verification-with-id.create') ? 'active' : ''}}"><a href="{{route('profile-verification-with-id.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Verifier votre identité')}}</a></li>
                     </ul>
                 </li>
                 @if(!is_null(auth()->user()->seller))
                     <li class="treeview {{is_current_route(['seller-profile.edit','address.create','address.index','seller-verification-with-address.create']) ? 'active' : ''}}">
                         <a href="javascript:;">
                             <i class="fa fa-building-o" aria-hidden="true"></i>
-                            <span>{{__('Manage Store')}}</span>
+                            <span>{{__('Gérer ma boutique')}}</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="{{is_current_route('seller-profile.edit') ? 'active' : ''}}"><a href="{{route('seller-profile.edit', auth()->user()->seller->id)}}"><i class="fa fa-dot-circle-o"></i>{{__('Edit Store')}}</a></li>
-                            <li class="{{is_current_route('address.create') ? 'active' : ''}}"><a href="{{route('address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Add New Address')}}</a></li>
-                            <li class="{{is_current_route('address.index') ? 'active' : ''}}"><a href="{{route('address.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Choose Default Address')}}</a></li>
-                            <li class="{{is_current_route('seller-verification-with-address.create') ? 'active' : ''}}"><a href="{{route('seller-verification-with-address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Verify Your Address')}}</a></li>
+                            <li class="{{is_current_route('seller-profile.edit') ? 'active' : ''}}"><a href="{{route('seller-profile.edit', auth()->user()->seller->id)}}"><i class="fa fa-dot-circle-o"></i>{{__('Modifier la boutique')}}</a></li>
+                            <li class="{{is_current_route('address.create') ? 'active' : ''}}"><a href="{{route('address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Ajouter une adresse')}}</a></li>
+                            <li class="{{is_current_route('address.index') ? 'active' : ''}}"><a href="{{route('address.index')}}"><i class="fa fa-dot-circle-o"></i>{{__('Choisir une adresse par défaut')}}</a></li>
+                            <li class="{{is_current_route('seller-verification-with-address.create') ? 'active' : ''}}"><a href="{{route('seller-verification-with-address.create')}}"><i class="fa fa-dot-circle-o"></i>{{__('Verifier votre adresse')}}</a></li>
                         </ul>
                     </li>
                 @endif
                 <li class="{{is_current_route('notification.index') ? 'active' : ''}}">
                     <a href="{{route('notification.index')}}">
-                        <i class="fa fa-bell-o"></i> <span>{{__('My Notifications')}}</span>
+                        <i class="fa fa-bell-o"></i> <span>{{__('Mes notifications')}}</span>
                         @if(total_notifications() != null)
                             <small class="label pull-right label-info custom-notifi-badge">{{total_notifications()}}</small>
                         @endif
@@ -126,21 +126,21 @@
                 <li class="treeview {{is_current_route(['dispute.create','dispute.index']) ? 'active' : ''}}">
                     <a href="javascript:;">
                         <i class="fa fa-bug" aria-hidden="true"></i>
-                        <span>{{__('Manage Reports')}}</span>
+                        <span>{{__('Gérer les rapports')}}</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="{{is_current_route('dispute.create') ? 'active' : ''}}"><a href="{{route('dispute.create')}}"><i class="fa fa-pencil-square-o"></i> <span>{{__('Report An Issue')}}</span></a></li>
-                        <li class="{{is_current_route('dispute.index') ? 'active' : ''}}"><a href="{{route('dispute.index')}}"><i class="fa fa-list"></i> <span>{{__('My All Reports')}}</span></a></li>
+                        <li class="{{is_current_route('dispute.create') ? 'active' : ''}}"><a href="{{route('dispute.create')}}"><i class="fa fa-pencil-square-o"></i> <span>{{__('Signaler un dysfonctionnement')}}</span></a></li>
+                        <li class="{{is_current_route('dispute.index') ? 'active' : ''}}"><a href="{{route('dispute.index')}}"><i class="fa fa-list"></i> <span>{{__('Tous mes rapports')}}</span></a></li>
                     </ul>
                 </li>
             @endif
-            <li class="header mt-4">{{__('SITE NAVIGATION')}}</li>
-            <li class="{{is_current_route('auction.home') ? 'active' : ''}}"><a href="{{route('auction.home')}}"><i class="fa fa-gavel"></i> <span>{{__('All Auctions')}}</span></a></li>
+            <li class="header mt-4">{{__('NAVIGATION SUR LE SITE')}}</li>
+            <li class="{{is_current_route('auction.home') ? 'active' : ''}}"><a href="{{route('auction.home')}}"><i class="fa fa-gavel"></i> <span>{{__('Toutes les enchères')}}</span></a></li>
             <li class="treeview {{is_current_route('auction-type.home') ? 'active' : ''}}">
                 <a href="javascript:;">
                     <i class="fa fa-list"></i>
-                    <span>{{__('Auction Types')}}</span>
+                    <span>{{__('Types d\'enchères')}}</span>
                     <span class="label label-primary pull-right badge badge-pill bg-teal text-white">4</span>
                 </a>
                 <ul class="treeview-menu display-none">
@@ -153,12 +153,12 @@
             </li>
             <li class="{{is_current_route('contact-us.create') ? 'active' : ''}}">
                 <a href="{{route('contact-us.create')}}">
-                    <i class="fa fa-envelope-open-o"></i> <span>{{__('Contact Us')}}</span>
+                    <i class="fa fa-envelope-open-o"></i> <span>{{__('Nous contacter')}}</span>
                 </a>
             </li>
             <li class="{{is_current_route('auction-rules.index') ? 'active' : ''}}">
                 <a href="{{route('auction-rules.index')}}">
-                    <i class="fa fa-question-circle-o"></i> <span>{{__('Auction Rules')}}</span>
+                    <i class="fa fa-question-circle-o"></i> <span>{{__('Règles d\'enchères')}}</span>
                 </a>
             </li>
         </ul>
@@ -216,11 +216,11 @@
                     <nav class="nav nav-pills d-flex text-center">
                         <a class="flex-fill guest-link text-sm-center nav-link" data-toggle="modal"
                            data-target="#registerModal" href="javascript:">
-                            Register
+                            Créer un compte
                         </a>
                         <a class="flex-fill guest-link text-sm-center nav-link" data-toggle="modal"
                            data-target="#loginModal" href="javascript;">
-                            Login
+                            Se connecter
                         </a>
                     </nav>
                     @else
@@ -245,7 +245,7 @@
                                         <span class="d-block px-2 float-right color-999 fz-12">{{$notification->created_at !== null ? $notification->created_at->diffForHumans():''}}</span>
                                     </div>
                                 @endforeach
-                                <a class="d-block border-top pt-2 mt-2 text-center" href="{{route('notification.index')}}">{{__('See all notifications')}}</a>
+                                <a class="d-block border-top pt-2 mt-2 text-center" href="{{route('notification.index')}}">{{__('Voir toutes les notifications')}}</a>
                             </div>
                             <!-- End: notification area -->
                         </div>
@@ -259,27 +259,27 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{route('user-profile.index')}}">
                                     <i class="fa fa-user mr-3"></i>
-                                    {{__('Profile')}}
+                                    {{__('Profil')}}
                                 </a>
                                 <a class="dropdown-item" href="{{route('notification.index')}}">
                                     <i class="fa fa-bell-o mr-3"></i>
-                                    {{__('My Notifications')}}
+                                    {{__('Mes notifications')}}
                                 </a>
                                 <a class="dropdown-item" href="{{route('dispute.create')}}">
                                     <i class="fa fa-bug mr-3"></i>
-                                    {{__('Report An Issue')}}
+                                    {{__('Signaler un problème')}}
                                 </a>
                                 <a class="dropdown-item" href="{{route('transaction-history')}}">
                                     <i class="fa fa-money mr-3"></i>
-                                    {{__('My Transactions')}}
+                                    {{__('Mes transactions')}}
                                 </a>
                                 <a class="dropdown-item" href="{{route('user-profile.edit')}}">
                                     <i class="fa fa-cogs mr-3"></i>
-                                    {{__('Manage Profile')}}
+                                    {{__('Manager mon profil')}}
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}">
-                                    <i class="fa fa-sign-out mr-3" aria-hidden="true"></i> {{__('Log out')}}
+                                    <i class="fa fa-sign-out mr-3" aria-hidden="true"></i> {{__('Déconnexion')}}
                                 </a>
                             </div>
                         </div>

@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-12">
                     <div class="m-y-50 position-relative">
-                        <div class="fz-26 font-weight-bold color-999 global-custom-header"> <span class="color-default">{{$title}} </span>{{__('Us')}}</div>
+                        <div class="fz-26 font-weight-bold color-999 global-custom-header"> <span class="color-default">{{$title}} - {{__('Contactez')}} </span>{{__('Nous')}}</div>
                         <div class="d-block">
                             <div class="fz-16 text-right position-relative">
                                 <span class="link-border"></span>
@@ -36,11 +36,11 @@
                                         <div class="row">
 
                                             <div class="col-md-6 col-sm-12">
-                                                <input type="text" name="{{fake_field('name')}}" value="{{fake_field(old('name'))}}" class="form-control" placeholder="Name">
+                                                <input type="text" name="{{fake_field('name')}}" value="{{fake_field(old('name'))}}" class="form-control" placeholder="Nom">
                                                 <span class="invalid-feedback cval-error d-block" data-cval-error="{{ fake_field('name') }}">{{ $errors->first('name') }}</span>
                                             </div>
                                             <div class="col-md-6 col-sm-12 m-sm-top-24">
-                                                <input type="text" name="{{fake_field('phone_number')}}" value="{{fake_field(old('phone_number'))}}" class="form-control" placeholder="Phone">
+                                                <input type="text" name="{{fake_field('phone_number')}}" value="{{fake_field(old('phone_number'))}}" class="form-control" placeholder="Téléphone">
                                                 <span class="invalid-feedback cval-error d-block" data-cval-error="{{ fake_field('phone_number') }}">{{ $errors->first('phone_number') }}</span>
                                             </div>
                                             <div class="col-md-6 col-sm-12 mt-4">
@@ -48,12 +48,12 @@
                                                 <span class="invalid-feedback cval-error d-block" data-cval-error="{{ fake_field('email') }}">{{ $errors->first('email') }}</span>
                                             </div>
                                             <div class="col-md-6 col-sm-12 mt-4">
-                                                <input type="text" name="{{fake_field('subject')}}" value="{{fake_field(old('subject'))}}" class="form-control" placeholder="Subject">
+                                                <input type="text" name="{{fake_field('subject')}}" value="{{fake_field(old('subject'))}}" class="form-control" placeholder="Sujet">
                                                 <span class="invalid-feedback cval-error d-block" data-cval-error="{{ fake_field('subject') }}">{{ $errors->first('subject') }}</span>
                                             </div>
 
                                             <div class="col-12">
-                                                <textarea class="form-control mt-4" name="{{fake_field('message')}}" value="{{fake_field(old('message'))}}" id="Textarea1" placeholder="Write Massage" rows="5"></textarea>
+                                                <textarea class="form-control mt-4" name="{{fake_field('message')}}" value="{{fake_field(old('message'))}}" id="Textarea1" placeholder="Votre message" rows="5"></textarea>
                                                 <span class="invalid-feedback cval-error d-block" data-cval-error="{{ fake_field('message') }}">{{ $errors->first('message') }}</span>
                                                 @if( env('APP_ENV') != 'local' && settings('display_google_captcha') == ACTIVE_STATUS_ACTIVE )
                                                     <div class="input-group">
@@ -63,7 +63,7 @@
                                                         <span class="invalid-feedback">{{ $errors->first('g-recaptcha-response') }}</span>
                                                     </div>
                                                 @endif
-                                                <button class="btn custom-btn mt-4" type="submit" name="button">Send Massage</button>
+                                                <button class="btn custom-btn mt-4" type="submit" name="button">Envoyer le message</button>
                                             </div>
 
                                         </div>

@@ -41,7 +41,7 @@
 
                     <!-- Start: countdown -->
                     <div class="count-down">
-                        <div class="color-999 d-inline-block fz-12">{{'ENDS IN :'}}</div>
+                        <div class="color-999 d-inline-block fz-12">{{'FINI DANS :'}}</div>
                         <div class="timer d-inline-block">
                             <Timer
                                 starttime="{{\Carbon\Carbon::parse($auction->started_date)->format('M d\\, Y h:i:s')}}"
@@ -51,13 +51,13 @@
                                     "hours":"H",
                                     "minutes":"M",
                                     "seconds":"S",
-                                    "expired":"Event has been expired.",
-                                    "running":"Till the end of event.",
-                                    "upcoming":"Till start of event.",
+                                    "expired":"L'événement a expiré.",
+                                    "running":"Jusqu'à la fin de l'événement.",
+                                    "upcoming":"Jusqu'au début de l'événement.",
                                     "status": {
-                                            "expired":"Expired",
-                                            "running":"Running",
-                                            "upcoming":"Future"
+                                            "expired":"Expiré",
+                                            "running":"En cours",
+                                            "upcoming":"Futur"
                                         }
                                     }'
                             ></Timer>
@@ -73,17 +73,17 @@
                                 <span class="main-text card-money d-block">
                                    <span class="fz-14 font-weight-normal"> {{$auction->currency != null ? $auction->currency->symbol : ''}}</span> {{$auction->bid_initial_price}}
                                 </span>
-                                <span class="sub-text text-uppercase">{{__('Start At')}}</span>
+                                <span class="sub-text text-uppercase">{{__('Commencer à')}}</span>
                             </li>
                             <li class="nav-item">
                                 <span class="main-text d-block">
                                     {{shipping_type($auction->shipping_type)}}
                                 </span>
-                                <span class="sub-text text-uppercase">{{__('Shipping')}}</span>
+                                <span class="sub-text text-uppercase">{{__('Expédition')}}</span>
                             </li>
                             <li class="nav-item">
                                 <span class="main-text d-block">{{$auction->is_multiple_bid_allowed != null ? is_multiple_bid_allowed($auction->is_multiple_bid_allowed) : '' }}</span>
-                                <span class="sub-text text-uppercase">{{__('Multi Bid')}}</span>
+                                <span class="sub-text text-uppercase">{{__('Offres multiples')}}</span>
                             </li>
                         </ul>
 

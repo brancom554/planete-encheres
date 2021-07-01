@@ -15,9 +15,9 @@
                     @else
                         <div class="card py-5">
                             <div class="card-body text-center auction-form p-5">
-                                <h2 class="color-666 font-weight-bold">Access Denied !</h2>
-                                <p class="color-999 fz-16 mt-2">Please check if your <span class="font-weight-bold">account is active</span> and your address is <span class="font-weight-bold">verified</span>.</p>
-                                <a class="btn custom-btn d-inline-block mt-4" href="{{route('home')}}">{{__('Go Back')}}</a>
+                                <h2 class="color-666 font-weight-bold">Accès refusé !</h2>
+                                <p class="color-999 fz-16 mt-2">Veuillez vérifier si votre <span class="font-weight-bold">compte est actif</span> et votre adresse est <span class="font-weight-bold">vérifiée</span>.</p>
+                                <a class="btn custom-btn d-inline-block mt-4" href="{{route('home')}}">{{__('Précédent')}}</a>
                             </div>
                         </div>
                     @endif

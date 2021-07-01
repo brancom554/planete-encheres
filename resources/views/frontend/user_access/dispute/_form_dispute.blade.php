@@ -25,7 +25,7 @@
                                     @if(empty($disputeType) || empty($refId))
                                         {{-- Start: select button --}}
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label font-weight-lighter text-secondary" for="{{ fake_field('dispute_type') }}">Select Report Type <span class="float-right d-inline-block">:</span></label>
+                                            <label class="col-sm-3 col-form-label font-weight-lighter text-secondary" for="{{ fake_field('dispute_type') }}">Sélectionnez le type de rapport <span class="float-right d-inline-block">:</span></label>
                                             <div class="col-sm-9">
                                                 {{ Form::select(fake_field('dispute_type'), dispute_type(), old('dispute_type'), ['class' => 'custom-select my-1 mr-sm-2', 'id' => fake_field('dispute_type')]) }}
                                             </div>
@@ -49,7 +49,7 @@
 
                                     {{-- Start: Title--}}
                                     <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label font-weight-lighter text-secondary" for="{{ fake_field('title') }}">Title <span class="float-right d-inline-block">:</span></label>
+                                        <label class="col-sm-3 col-form-label font-weight-lighter text-secondary" for="{{ fake_field('title') }}">Titre <span class="float-right d-inline-block">:</span></label>
                                         <div class="col-sm-9">
                                             {{ Form::text(fake_field('title'), old('title', null), ['class'=> 'form-control', 'id' => fake_field('title'),'data-cval-name' => 'The Title field', 'data-cval-rules' => 'required|min:3|max:255']) }}
                                             <span class="invalid-feedback cval-error" data-cval-error="{{ fake_field('title') }}">{{ $errors->first('title') }}</span>
@@ -72,7 +72,7 @@
                                             <div id="preview-multi-img">
                                                 <div class="row" id="TextBoxContainer">
                                                 </div>
-                                                <button id="btnAdd" type="button" class="btn text-secondary bg-custom-gray" data-toggle="tooltip">{{__('Add Image')}}</button>
+                                                <button id="btnAdd" type="button" class="btn text-secondary bg-custom-gray" data-toggle="tooltip">{{__('Ajouter Image')}}</button>
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-muted">
-                            <button value="Submit Design" type="submit" class="btn custom-btn float-right form-submission-button has-spinner my-2" id="two">{{__('Submit Report')}}</button>
+                            <button value="Submit Design" type="submit" class="btn custom-btn float-right form-submission-button has-spinner my-2" id="two">{{__('Enregistrer le rapport')}}</button>
                         </div>
                     </div>
 
@@ -127,7 +127,7 @@
                 count--
                 if(count == 1)
                 {
-                    $('#preview-multi-img').append('<button id="btnAdd" type="button" class="btn btn-primary">{{__('Add Image')}}</button>')
+                    $('#preview-multi-img').append('<button id="btnAdd" type="button" class="btn btn-primary">{{__('Ajouter Image')}}</button>')
                 }
             });
         });

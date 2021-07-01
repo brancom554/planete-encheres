@@ -20,8 +20,8 @@
                             @slot('thead')
                                 <tr class="bg-info text-white text-center">
                                     <th class="min-phone-l">{{ __('Details') }}</th>
-                                    <th class="min-phone-l">{{ __('Time') }}</th>
-                                    <th class="min-phone-l">{{ __('Status') }}</th>
+                                    <th class="min-phone-l">{{ __('Temps') }}</th>
+                                    <th class="min-phone-l">{{ __('Statut') }}</th>
                                     <th class="min-phone-l">{{ __('Action') }}</th>
                                 </tr>
                             @endslot
@@ -40,16 +40,16 @@
                                                 <div class="dropdown-menu  drop-menu dropdown-menu-right">
                                                     @if($userNotification->link != null)
                                                     <a class="dropdown-item" href="{{$userNotification->link }}"><i
-                                                            class="fa fa-dot-circle-o text-red"></i> {{ __('Go to link') }}
+                                                            class="fa fa-dot-circle-o text-red"></i> {{ __('Aller au lien') }}
                                                     </a>
                                                     @endif
                                                     @if($userNotification->read_at)
                                                         <a class="dropdown-item" href="{{ route('notification.mark-as-unread',$userNotification->id) }}"><i
-                                                                class="fa fa-dot-circle-o text-red"></i> {{ __('Mark as unread') }}
+                                                                class="fa fa-dot-circle-o text-red"></i> {{ __('Marquer comme non lu') }}
                                                         </a>
                                                     @else
                                                         <a class="dropdown-item" href="{{ route('notification.mark-as-read',$userNotification->id) }}"><i
-                                                                class="fa fa-dot-circle-o text-green"></i> {{ __('Mark as read') }}
+                                                                class="fa fa-dot-circle-o text-green"></i> {{ __('Marquer comme lu') }}
                                                         </a>
                                                     @endif
                                                 </div>

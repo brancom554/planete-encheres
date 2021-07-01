@@ -42,7 +42,7 @@
                                         <ul class="nav">
                                             <li class="color-999">
                                                 <i class="fa fa-flag"></i>
-                                                By <a
+                                                Par <a
                                                     href="{{route('seller-profile.show', $auction->seller_id)}}">{{ !is_null($auction->seller) ? $auction->seller->name : ''}}</a>
                                             </li>
                                             <li class="color-999">
@@ -67,7 +67,7 @@
 
                                     <!-- Start: property price -->
                                     <div class="property-price align-self-center">
-                                        <h4 class="m-b-10 font-weight-bold text-capitalize">{{__('Bid Start From')}}</h4>
+                                        <h4 class="m-b-10 font-weight-bold text-capitalize">{{__('Enchère à partir de')}}</h4>
                                         <div class="mb-2 color-999">
                                             <span>{{empty($auction->currency->symbol) ? '' : $auction->currency->symbol}}</span>
                                             {{$auction->bid_initial_price}}
@@ -115,7 +115,7 @@
                                     <div class="dropdown-menu  drop-menu dropdown-menu-right">
                                         <a class="p-2 d-block"
                                            href="{{route('disputes.specific', [DISPUTE_TYPE_AUCTION_ISSUE, $auction->ref_id])}}">
-                                            {{__('Report Auction')}}
+                                            {{__('Signaler l\'enchère')}}
                                         </a>
                                     </div>
                                 </div>
@@ -134,8 +134,8 @@
                     <div class="s-box mb-3">
                         <!-- Start: header -->
                         <div class="s-box-header">
-                            <span> {{__('Ends')}} </span>
-                            {{__('In')}}
+                            <span> {{__('Fini')}} </span>
+                            {{__('dans')}}
                         </div>
                         <!-- End: header -->
                         <!-- Start: countdown -->
@@ -169,7 +169,7 @@
 
                         <!-- Start: header -->
                         <div class="s-box-header">
-                            <span> {{__('Bidding')}} </span>
+                            <span> {{__('Enchère')}} </span>
                             {{__('Section')}}
                         </div>
                         <!-- End: header -->
@@ -179,14 +179,14 @@
                             <ul class="list-group">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <span>
-                                        {{__('Auction Type :')}}
+                                        {{__('Type d\'enchère :')}}
                                     </span>
                                     <span
                                         class="badge badge-pill {{config('commonconfig.auction_type.' . ( !is_null($auction) ? $auction->auction_type : ACTIVE_STATUS_ACTIVE ) . '.color_class')}}">{{ config('commonconfig.auction_type.' . ( !is_null($auction) ? $auction->auction_type : ACTIVE_STATUS_ACTIVE ) . '.text')}}</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <span>
-                                        {{__('Multiple Bid Allowed :')}}
+                                        {{__('Enchère multiple autorisée :')}}
                                     </span>
                                     <span
                                         class="badge badge-pill {{config('commonconfig.is_multi_bid_allowed.' . ( !is_null($auction) ? $auction->is_multiple_bid_allowed : ACTIVE_STATUS_ACTIVE ) . '.color_class')}}">{{ config('commonconfig.is_multi_bid_allowed.' . ( !is_null($auction) ? $auction->is_multiple_bid_allowed : ACTIVE_STATUS_ACTIVE ) . '.text')}}</span>
@@ -195,14 +195,14 @@
                             <ul class="list-group mt-3">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <span>
-                                        {{__('Total Bids :')}}
+                                        {{__('Total des offres :')}}
                                     </span>
                                     <span class="badge badge-primary badge-pill">{{$auction->bids->count()}}</span>
                                 </li>
                                 @if($auction->auction_type != AUCTION_TYPE_UNIQUE_BIDDER && $auction->auction_type != AUCTION_TYPE_VICKREY_AUCTION)
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>
-                                            {{__('Bid Increment Difference :')}}
+                                            {{__('Différence d\'incrément d'enchère :')}}
                                         </span>
                                         <span
                                             class="badge badge-primary badge-pill"><span class="font-weight-normal"> {{$auction->currency->symbol}}</span> {{$auction->bid_increment_dif}}</span>
@@ -211,7 +211,7 @@
                                 @if($auction->auction_type == AUCTION_TYPE_HIGHEST_BIDDER && settings('bidding_fee_on_highest_bidder_auction') > 0)
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>
-                                            {{__('Bidding Fee :')}}
+                                            {{__('Frais d\'enchère :')}}
                                         </span>
                                         <span
                                             class="badge badge-primary badge-pill"><span class="font-weight-normal"> {{$auction->currency->symbol}}</span> {{settings('bidding_fee_on_highest_bidder_auction')}}</span>
@@ -219,7 +219,7 @@
                                 @elseif($auction->auction_type == AUCTION_TYPE_BLIND_BIDDER && settings('bidding_fee_on_blind_bidder_auction') > 0)
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>
-                                            {{__('Bidding Fee :')}}
+                                            {{__('Frais d\'enchère :')}}
                                         </span>
                                         <span
                                             class="badge badge-primary badge-pill"><span class="font-weight-normal"> {{$auction->currency->symbol}}</span><span class="font-weight-normal"> {{$auction->currency->symbol}}</span> {{settings('bidding_fee_on_blind_bidder_auction')}}</span>
@@ -227,7 +227,7 @@
                                 @elseif($auction->auction_type == AUCTION_TYPE_UNIQUE_BIDDER && settings('bidding_fee_on_unique_bidder_auction') > 0)
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>
-                                            {{__('Bidding Fee :')}}
+                                            {{__('Frais d\'enchère :')}}
                                         </span>
                                         <span
                                             class="badge badge-primary badge-pill"><span class="font-weight-normal"> {{$auction->currency->symbol}}</span> {{settings('bidding_fee_on_unique_bidder_auction')}}</span>
@@ -235,7 +235,7 @@
                                 @elseif($auction->auction_type == AUCTION_TYPE_VICKREY_AUCTION && settings('bidding_fee_on_vickrey_bidder_auction') > 0)
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>
-                                            {{__('Bidding Fee :')}}
+                                            {{__('Frais d\'enchère :')}}
                                         </span>
                                         <span
                                             class="badge badge-primary badge-pill"><span class="font-weight-normal"> {{$auction->currency->symbol}}</span><span class="font-weight-normal"> {{$auction->currency->symbol}}</span> {{settings('bidding_fee_on_vickrey_bidder_auction')}}</span>
@@ -244,7 +244,7 @@
                                 @if(count($auction->bids) > 0 && $auction->auction_type == AUCTION_TYPE_HIGHEST_BIDDER)
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>
-                                            {{__('Highest Bid Amount:')}}
+                                            {{__('Montant de l\'offre la plus élevée:')}}
                                         </span>
                                         <span
                                             class="badge badge-primary badge-pill"><span class="font-weight-normal"> {{$auction->currency->symbol}}</span> {{$auction->bids->max('amount')}}</span>
@@ -256,7 +256,7 @@
                                 <ul class="list-group mt-3">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>
-                                            {{__('Your Last Bid :')}}
+                                            {{__('Votre dernière enchère :')}}
                                         </span>
                                         <span class="badge border color-666 badge-pill"> <span
                                                 class="mr-1 font-weight-normal">{{$auction->currency->symbol}}</span> {{$userLastBid->amount}}</span>
@@ -269,7 +269,7 @@
                                 <ul class="list-group mt-3">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span class="font-weight-bold color-666">
-                                            {{__('Next Minimum Bid Amount :')}}
+                                            {{__('Montant minimum de l\'enchère suivante :')}}
                                         </span>
                                         <span class="badge bg-warning text-white badge-pill"> <span class="mr-1 font-weight-normal">{{$auction->currency->symbol}}</span>{{$highestBid->amount + $auction->bid_increment_dif}}</span>
                                     </li>
@@ -278,7 +278,7 @@
                                 <ul class="list-group mt-3">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span class="font-weight-bold color-666">
-                                            {{__('Minimum Bid Amount :')}}
+                                            {{__('Montant minimum de l\'enchère :')}}
                                         </span>
                                         <span class="badge bg-warning text-white badge-pill"> <span class="mr-1 font-weight-normal">{{$auction->currency->symbol}}</span>{{$auction->bid_initial_price}}</span>
                                     </li>
@@ -289,7 +289,7 @@
                                 <ul class="list-group mt-3">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span class="font-weight-bold color-666">
-                                            {{__('Minimum Bid Amount :')}}
+                                            {{__('Montant minimum de l\'enchère :')}}
                                         </span>
                                         <span class="badge bg-warning text-white badge-pill"> <span class="mr-1 font-weight-normal">{{$auction->currency->symbol}}</span>{{$auction->bid_initial_price}}</span>
                                     </li>
@@ -300,7 +300,7 @@
                                 <ul class="list-group mt-3">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span class="font-weight-bold color-666">
-                                            {{__('Minimum Bid Amount :')}}
+                                            {{__('Montant minimum de l\'enchère :')}}
                                         </span>
                                         <span class="badge bg-warning text-white badge-pill"> <span class="mr-1 font-weight-normal">{{$auction->currency->symbol}}</span>{{$auction->bid_initial_price}}</span>
                                     </li>
@@ -311,7 +311,7 @@
                                 <ul class="list-group mt-3">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span class="font-weight-bold color-666">
-                                            {{__('Minimum Bid Amount :')}}
+                                            {{__('Montant minimum de l\'enchère :')}}
                                         </span>
                                         <span class="badge bg-warning text-white badge-pill"> <span class="mr-1 font-weight-normal">{{$auction->currency->symbol}}</span>{{$auction->bid_initial_price}}</span>
                                     </li>
@@ -342,7 +342,7 @@
 
                                     <button value="Submit" type="submit"
                                             class="btn custom-btn w-100 float-right has-spinner"
-                                            id="two">{{__('Bid Your Amount')}}</button>
+                                            id="two">{{__('Enchérissez votre montant')}}</button>
 
                                     {{ Form::close() }}
                                 </div>
@@ -361,7 +361,7 @@
                     <div class="col-lg-12">
                         <div class="card mt-5">
                             <div class="card-body">
-                                <h5 class="color-666 mb-3">{{__('Winner Address :')}}</h5>
+                                <h5 class="color-666 mb-3">{{__('Adresse du gagnant :')}}</h5>
 
                                 <!-- Start: address card -->
                                 <div class="card">
@@ -373,14 +373,14 @@
                                                     <li>
                                                         <span>
                                                             <i class="fa fa-user justify-content-center"></i>
-                                                            name :
+                                                            nom :
                                                         </span>
                                                         {{$address->name}}
                                                     </li>
                                                     <li>
                                                         <span>
                                                             <i class="fa fa-map-marker"></i>
-                                                            location :
+                                                            localisation :
                                                         </span>
                                                         {{$address->city}}
                                                         {{$address->country->name}}
@@ -388,21 +388,21 @@
                                                     <li>
                                                         <span>
                                                             <i class="fa fa-phone"></i>
-                                                            phone :
+                                                            téléphone :
                                                         </span>
                                                         {{$address->phone_number}}
                                                     </li>
                                                     <li>
                                                         <span>
                                                             <i class="fa fa-envelope"></i>
-                                                            post code :
+                                                            code postal :
                                                         </span>
                                                         {{$address->post_code}}
                                                     </li>
                                                     <li>
                                                         <span>
                                                             <i class="fa fa-check-circle"></i>
-                                                            Verification Status :
+                                                            Statut vérification :
                                                         </span>
 
                                                         <span
@@ -425,20 +425,20 @@
 
                                 <!-- Start: shipping instruction -->
                                 <div class="m-4">
-                                    <h5 class="color-666 border-bottom pb-3">{{__('Shipping instruction :')}}</h5>
+                                    <h5 class="color-666 border-bottom pb-3">{{__('Instruction de livraison :')}}</h5>
                                     <p class="mt-3">{{$auction->shipping_description}}</p>
                                 </div>
                                 <!-- End: shipping instruction -->
 
                                 <div class="m-4">
-                                    <h5 class="color-666 mb-3">{{__('Shipping Status :')}}</h5>
+                                    <h5 class="color-666 mb-3">{{__('Statut livraison :')}}</h5>
                                     <span
                                         class="badge badge-pill {{config('commonconfig.product_claim_status.' . ( !is_null($auction) ? $auction->product_claim_status : '' ) . '.color_class')}}">{{ config('commonconfig.product_claim_status.' . ( !is_null($auction) ? $auction->product_claim_status : '' ) . '.text')}}</span>
 
                                     @if($auction->product_claim_status == AUCTION_PRODUCT_CLAIM_STATUS_NOT_DELIVERED_YET)
-                                        <h5 class="color-666 mt-4">{{__('Please Submit Delivery date :')}}</h5>
+                                        <h5 class="color-666 mt-4">{{__('Veuillez soumettre Date de livraison :')}}</h5>
                                         <span
-                                            class="color-999 d-block fz-12">{{__('Expected date of Product receiving')}}</span>
+                                            class="color-999 d-block fz-12">{{__('Date prévue de réception du produit')}}</span>
                                         {{ Form::open(['route'=>['update-shipping-status.update',$auction->id],'class'=>'form-horizontal cvalidate', 'files' => true]) }}
                                         @method('put')
                                         @basekey
@@ -446,14 +446,14 @@
                                         <!-- Start: delivery date -->
                                         <div class="form-row mt-3">
                                             <div class="col-md-4">
-                                                {{ Form::text(fake_field('delivery_date'), old('delivery_date'), ['class'=> 'form-control datepicker', 'id' => fake_field('delivery_date'),'data-cval-name' => 'The delivery_date field','data-cval-rules' => 'required|decimal', 'placeholder' => __('Starting Date')]) }}
+                                                {{ Form::text(fake_field('delivery_date'), old('delivery_date'), ['class'=> 'form-control datepicker', 'id' => fake_field('delivery_date'),'data-cval-name' => 'The delivery_date field','data-cval-rules' => 'required|decimal', 'placeholder' => __('Date de début')]) }}
                                                 <span class="invalid-feedback cval-error"
                                                       data-cval-error="{{ fake_field('delivery_date') }}">{{ $errors->first('delivery_date') }}</span>
                                             </div>
                                         </div>
                                         <!-- End: delivery date -->
 
-                                        <button type="submit" class="btn btn-info mt-3">{{__('Submit Date')}}</button>
+                                        <button type="submit" class="btn btn-info mt-3">{{__('Enregistrer Date')}}</button>
 
                                         {{ Form::close() }}
                                     @endif
@@ -481,17 +481,17 @@
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                     <a class="nav-item nav-link active" id="description" data-toggle="tab"
                                        href="#descrip" role="tab" aria-controls="descrip"
-                                       aria-selected="true">{{__('Product Description')}}</a>
+                                       aria-selected="true">{{__('Description du produit')}}</a>
                                     @if(!is_null($auction->terms_description))
                                         <a class="nav-item nav-link" id="features" data-toggle="tab" href="#featu"
                                            role="tab" aria-controls="featu"
-                                           aria-selected="false">{{__('Term Description')}}</a>
+                                           aria-selected="false">{{__('Détail description')}}</a>
                                     @endif
                                     @auth
                                     @if($auction->auction_type == AUCTION_TYPE_HIGHEST_BIDDER)
                                         <a class="nav-item nav-link" id="amenties" data-toggle="tab" href="#amenti"
                                            role="tab" aria-controls="amenti"
-                                           aria-selected="false">{{__('Bidding History')}}</a>
+                                           aria-selected="false">{{__('Historique des enchères')}}</a>
                                     @endif
                                     @endauth
                                 </div>
@@ -572,7 +572,7 @@
 
                             <!-- Start: total comment -->
                             <div class="single-comment-amount mb-4">
-                                {{__('Comments')}}
+                                {{__('Commentaires')}}
                             </div>
                             <!-- End: total comment -->
 
@@ -581,14 +581,14 @@
                                 @include('layouts.includes.comment_index')
                             @else
                                 <span class="color-666">
-                                    <h6><i class="fa fa-comment-o"></i> {{('No Comment Available')}}</h6>
+                                    <h6><i class="fa fa-comment-o"></i> {{('Aucun commentaire disponible')}}</h6>
                                 </span>
                             @endif
                             <!-- End: single comment -->
 
                             <!-- Start: total comment -->
                             <div class="single-comment-amount text-capitalize mt-5 mb-4">
-                                {{__('add comment')}}
+                                {{__('ajouter un commentaire')}}
                             </div>
                             <!-- End: total comment -->
 

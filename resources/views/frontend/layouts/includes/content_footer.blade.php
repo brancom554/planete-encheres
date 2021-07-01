@@ -4,7 +4,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title justify-content-center font-weight-bold" id="exampleModalLongTitle">{{ __('Login Panel') }}</h5>
+                    <h5 class="modal-title justify-content-center font-weight-bold" id="exampleModalLongTitle">{{ __('Page de connexion') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -23,13 +23,13 @@
 
                                 <div class="input-group mb-4">
                                     <input type="text" id="txt_uname" class="form-control" name="{{ fake_field('username') }}"
-                                           placeholder="Username" value="{{ old('username') }}">
+                                           placeholder="Identifiant" value="{{ old('username') }}">
                                     <span class="invalid-feedback">{{ $errors->first('username') }}</span>
                                     <span class="alert login-alert mb-0 mt-1 p-1 fz-12" role="alert" id="username_alert"></span>
                                 </div>
                                 <div class="input-group mb-4">
                                     <input type="password" id="txt_pwd" class="form-control" name="{{ fake_field('password') }}"
-                                           placeholder="Password">
+                                           placeholder="Mot de passe">
                                     <span class="invalid-feedback">{{ $errors->first('password') }}</span>
                                     <span class="alert login-alert mb-0 mt-1 p-1 fz-12" role="alert" id="password_alert"></span>
                                 </div>
@@ -46,14 +46,14 @@
                                 <div class="form-row ">
                                     <div class="checkbox col-6">
                                         <input id="rememberMe" type="checkbox" class="" name="{{ fake_field('remember_me') }}">
-                                        <label class="fz-14 text-muted" for="rememberMe">{{ __('Remember Me') }}</label>
+                                        <label class="fz-14 text-muted" for="rememberMe">{{ __('Se souvenir de moi') }}</label>
                                     </div>
                                     <div class="col-6 text-right laraframe-form">
-                                        <a class="txt2 fz-14 text-secondary" href="{{ route('forget-password.index') }}">{{ __('Forgot Password?') }}</a>
+                                        <a class="txt2 fz-14 text-secondary" href="{{ route('forget-password.index') }}">{{ __('Mot de passe oublié?') }}</a>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" id="but_submit" class="btn mt-5 w-100 default-color text-white custom-btn">{{ __('Login') }}</button>
+                                    <button type="submit" id="but_submit" class="btn mt-5 w-100 default-color text-white custom-btn">{{ __('Connexion') }}</button>
                                 </div>
                             </form>
 
@@ -62,8 +62,8 @@
                 </div>
                 <div class="modal-footer text-center">
                     <div class="text-center pt-1 laraframe-form">
-                        <p class="text-muted">{{__('Don not have an account?')}}</p>
-                        <a class="txt2 text-secondary" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#registerModal" href="javascript;">{{ __('Create One') }}</a>
+                        <p class="text-muted">{{__('Vous n\'avez pas de compte?')}}</p>
+                        <a class="txt2 text-secondary" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#registerModal" href="javascript;">{{ __('Créer un compte') }}</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title justify-content-center font-weight-bold" id="exampleModalLongTitle">{{ __('Registration') }}</h5>
+                    <h5 class="modal-title justify-content-center font-weight-bold" id="exampleModalLongTitle">{{ __('S\'inscrire') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -97,7 +97,7 @@
                                     <div class="col-md-6">
                                         <div class="input-group mb-4">
                                             <input type="text" id="first_name" class="{{ $errors->has('first_name') ? 'form-control invalid-form' : 'form-control' }}" name="{{ fake_field('first_name') }}" value="{{ old('first_name') }}"
-                                                   placeholder="First Name" data-cval-name="The first name field" data-cval-rules ="required|escapeInput|alphaSpace">
+                                                   placeholder="Votre nom" data-cval-name="The first name field" data-cval-rules ="required|escapeInput|alphaSpace">
                                             <span class="invalid-feedback cval-error" data-cval-error="{{ fake_field('first_name') }}">{{ $errors->first('first_name') }}</span>
 
                                             <span class="alert login-alert mb-0 mt-1 p-1 fz-12" role="alert" id="first_name_alert"></span>
@@ -108,7 +108,7 @@
                                             <input type="text" id="last_name"
                                                    class="{{ $errors->has('last_name') ? 'form-control invalid-form' : 'form-control' }}"
                                                    name="{{ fake_field('last_name') }}" value="{{ old('last_name') }}"
-                                                   placeholder="Last Name" data-cval-name="The last name field" data-cval-rules ="required|escapeInput|alphaSpace">
+                                                   placeholder="Votre prénom" data-cval-name="The last name field" data-cval-rules ="required|escapeInput|alphaSpace">
                                             <span class="invalid-feedback cval-error" data-cval-error="{{ fake_field('last_name') }}">{{ $errors->first('last_name') }}</span>
                                             <span class="alert login-alert mb-0 mt-1 p-1 fz-12" role="alert" id="last_name_alert"></span>
                                         </div>
@@ -119,7 +119,7 @@
                                     <input type="text" id="reg-username"
                                            class="{{ $errors->has('username') ? 'form-control invalid-form' : 'form-control' }}"
                                            name="{{ fake_field('username') }}"  value="{{ old('username') }}"
-                                           placeholder="Username" data-cval-name="The username field" data-cval-rules ="required|escapeInput|alphaDash">
+                                           placeholder="Identifiant" data-cval-name="The username field" data-cval-rules ="required|escapeInput|alphaDash">
                                     <span class="invalid-feedback cval-error" data-cval-error="{{ fake_field('username') }}">{{ $errors->first('username') }}</span>
                                     <span class="alert login-alert mb-0 mt-1 p-1 fz-12" role="alert" id="username_alert"></span>
                                 </div>
@@ -137,7 +137,7 @@
                                     <input type="password" id="reg-password"
                                            class="{{ $errors->has('password') ? 'form-control invalid-form' : 'form-control' }}"
                                            name="{{ fake_field('password') }}"
-                                           placeholder="Password" data-cval-name="The password field" data-cval-rules ="required|followedBy:{{fake_field('password_confirmation')  }}">
+                                           placeholder="Votre mot de passe" data-cval-name="The password field" data-cval-rules ="required|followedBy:{{fake_field('password_confirmation')  }}">
                                     <span class="invalid-feedback cval-error" data-cval-error="{{ fake_field('password') }}">{{ $errors->first('password') }}</span>
                                     <span class="alert login-alert mb-0 mt-1 p-1 fz-12" role="alert" id="password_alert"></span>
                                 </div>
@@ -146,7 +146,7 @@
                                     <input type="password" id="reg-password_confirmation"
                                            class="{{ $errors->has('password_confirmation') ? 'form-control invalid-form' : 'form-control' }}"
                                            name="{{ fake_field('password_confirmation') }}"
-                                           placeholder="Confirm Password" data-cval-name="The confirm password field" data-cval-rules ="required|follow:{{ fake_field('password') }}">
+                                           placeholder="Confirmer votre mot de passe" data-cval-name="The confirm password field" data-cval-rules ="required|follow:{{ fake_field('password') }}">
                                     <span class="invalid-feedback cval-error" data-cval-error="{{ fake_field('password_confirmation') }}">{{ $errors->first('password_confirmation') }}</span>
                                     <span class="alert login-alert mb-0 mt-1 p-1 fz-12" role="alert" id="password_confirmation_alert"></span>
                                 </div>
@@ -162,13 +162,13 @@
 
                                 <div class="checkbox pl-0">
                                     <input id="agreement" type="checkbox" name="{{ fake_field('check_agreement') }}" data-cval-name="The accept our terms and conditions field" data-cval-rules ="required">
-                                    <label class="fz-14 mb-2 text-muted" for="agreement">{{  __('Accept our terms and Conditions.') }}</label>
+                                    <label class="fz-14 mb-2 text-muted" for="agreement">{{  __('Accepter nos termes et conditions.') }}</label>
 
                                     <span class="invalid-feedback cval-error" data-cval-error="{{ fake_field('check_agreement') }}">{{ $errors->first('check_agreement') }}</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" id="reg_submit" class="btn mt-5 w-100 default-color text-white custom-btn form-submission-button">{{ __('Register') }}</button>
+                                    <button type="submit" id="reg_submit" class="btn mt-5 w-100 default-color text-white custom-btn form-submission-button">{{ __('Créer un compte') }}</button>
                                 </div>
                             </form>
 
@@ -178,8 +178,8 @@
 
                 <div class="modal-footer text-center">
                     <div class="text-center pt-1 laraframe-form">
-                        <p class="text-muted">{{__('Already have an account?')}}</p>
-                        <a class="txt2 text-secondary" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#loginModal" href="javascript;">{{ __('Login') }}</a>
+                        <p class="text-muted">{{__('Vous avez déjà un compte?')}}</p>
+                        <a class="txt2 text-secondary" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#loginModal" href="javascript;">{{ __('Se connecter') }}</a>
                     </div>
                 </div>
             </div>
@@ -200,7 +200,7 @@
 
                             <!-- Start: property cities -->
                             <div class="col-lg-5 col-md-6 p-t-50">
-                                <h5 class="text-uppercase font-weight-bold mb-5 text-white">{{__('Popular Categories')}}</h5>
+                                <h5 class="text-uppercase font-weight-bold mb-5 text-white">{{__('Catégories populaires')}}</h5>
 
                                 <!-- Start: property cities list -->
                                 <div class="prop-city">
@@ -219,7 +219,7 @@
 
                             <!-- Start: popular posts -->
                             <div class="col-lg-4 col-md-6 p-t-50">
-                                <h5 class="text-uppercase font-weight-bold mb-5 text-white">{{__('Popular Auction')}}</h5>
+                                <h5 class="text-uppercase font-weight-bold mb-5 text-white">{{__('Enchères populaires')}}</h5>
 
                                 <!-- Start: popular posts list -->
                                 <div class="popular-post">
@@ -250,7 +250,7 @@
 
                             <!-- Start: get in touch -->
                             <div class="col-lg-3 col-md-12 p-t-50">
-                                <h5 class="text-uppercase font-weight-bold mb-5 text-white">get in touch</h5>
+                                <h5 class="text-uppercase font-weight-bold mb-5 text-white">Nos contacts</h5>
 
                                 <div class="get-in-touch">
                                     <ul>

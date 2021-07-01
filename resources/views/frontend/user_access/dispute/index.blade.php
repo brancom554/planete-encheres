@@ -20,11 +20,11 @@
                         @component('components.table',['class'=> 'cm-data-table'])
                             @slot('thead')
                                 <tr class="bg-info">
-                                    <th class="min-phone-l">{{ __('Report Title') }}</th>
-                                    <th class="min-phone-l">{{ __('Reported On') }}</th>
-                                    <th class="min-phone-l">{{ __('Report Status') }}</th>
-                                    <th class="min-phone-l">{{ __('Created') }}</th>
-                                    <th class="min-phone-l">{{ __('Updated') }}</th>
+                                    <th class="min-phone-l">{{ __('Titre du rapport') }}</th>
+                                    <th class="min-phone-l">{{ __('Signalé le') }}</th>
+                                    <th class="min-phone-l">{{ __('Statut') }}</th>
+                                    <th class="min-phone-l">{{ __('Créée') }}</th>
+                                    <th class="min-phone-l">{{ __('Modifiée') }}</th>
                                     <th class="text-right all no-sort">{{ __('Action') }}</th>
                                 </tr>
                             @endslot
@@ -46,11 +46,11 @@
                                                 <div class="dropdown-menu  drop-menu dropdown-menu-right">
                                                     @if($dispute->read_at)
                                                         <a class="dropdown-item" href="{{ route('dispute.mark-as-unread',$dispute->id) }}"><i
-                                                                class="fa fa-dot-circle-o text-red"></i> {{ __('Mark as unread') }}
+                                                                class="fa fa-dot-circle-o text-red"></i> {{ __('Marquer comme non lu') }}
                                                         </a>
                                                     @else
                                                         <a class="dropdown-item" href="{{ route('dispute.mark-as-read',$dispute->id) }}"><i
-                                                                class="fa fa-dot-circle-o text-green"></i> {{ __('Mark as read') }}
+                                                                class="fa fa-dot-circle-o text-green"></i> {{ __('Marquer comme lu') }}
                                                         </a>
                                                     @endif
                                                 </div>

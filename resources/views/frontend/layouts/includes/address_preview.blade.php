@@ -1,5 +1,5 @@
 <div class="col-12 mt-4 was-validated custom-validate">
-    <h5 class="mb-4 color-666">Choose One Address you want to verify :</h5>
+    <h5 class="mb-4 color-666">Choisissez une adresse que vous souhaitez vérifier :</h5>
     @foreach($addresses as $address)
         @if($address->is_verified == VERIFICATION_STATUS_UNVERIFIED)
             <div class="card custom-validate-hover mb-4">
@@ -14,14 +14,14 @@
                                 <li>
                                     <span>
                                         <i class="fa fa-user"></i>
-                                        name :
+                                        Nom :
                                     </span>
                                     {{$address->name}}
                                 </li>
                                 <li>
                                     <span>
                                         <i class="fa fa-map-marker"></i>
-                                        location :
+                                        Localisation :
                                     </span>
                                     {{$address->city}}
                                     {{$address->country->name}}
@@ -29,21 +29,21 @@
                                 <li>
                                     <span>
                                         <i class="fa fa-phone"></i>
-                                        phone :
+                                        Téléphone :
                                     </span>
                                     {{$address->phone_number}}
                                 </li>
                                 <li>
                                     <span>
                                         <i class="fa fa-envelope"></i>
-                                        post code :
+                                        Code postal :
                                     </span>
                                     {{$address->post_code}}
                                 </li>
                                 <li>
                                     <span>
                                         <i class="fa fa-check-circle"></i>
-                                        Verification Status :
+                                        Statut de vérification :
                                     </span>
 
                                     <span class="badge d-inline-block w-auto badge-pill pr-2 text-white font-weight-normal {{config('commonconfig.verification_status.' . ( $address->is_verified !== VERIFICATION_STATUS_APPROVED ? VERIFICATION_STATUS_UNVERIFIED  : $address->is_verified) . '.color_class')}}"> {{verification_status($address->is_verified) }} </span>
